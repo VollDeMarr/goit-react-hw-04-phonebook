@@ -1,8 +1,8 @@
 import s from '../Contacts/Contacts.module.css';
-
+import { nanoid } from 'nanoid';
 const Contacts = ({ contacts, removeFn }) => {
   const ell = contacts.map(contact => (
-    <li key={contact.id} className={s.item}>
+    <li key={nanoid()} className={s.item}>
       {contact.name}: {contact.number}
       <button type="button" onClick={() => removeFn(contact.id)}>
         Delete
