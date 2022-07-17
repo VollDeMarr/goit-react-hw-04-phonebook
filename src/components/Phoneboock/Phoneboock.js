@@ -16,22 +16,6 @@ function Phoneboock() {
   const [filter, setFilter] = useState('');
   const firstRef = useRef(true);
 
-  // useEffect(() => {
-  //   if (firstRef.current) {
-  //     const getContacts = localStorage.getItem('contacts');
-  //     const contacts = JSON.parse(getContacts);
-  //     if (contacts?.length) {
-  //       setContacts(contacts);
-  //     }
-  //     firstRef.current = false;
-  //   }
-  // }, []);
-
-  // useEffect(() => {
-  //   if (!firstRef.current) {
-  //     localStorage.setItem('contacts', JSON.stringify(contacts));
-  //   }
-  // }, [contacts]);
   useEffect(() => {
     if (firstRef.current) {
       const getContacts = localStorage.getItem('contacts');
